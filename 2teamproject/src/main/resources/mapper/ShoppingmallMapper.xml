@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cafe2team.dao.ShoppingmallMapper">
+	<select id="memberInfo" resultType="Member">
+		SELECT 
+			  member_id				AS m_Id
+			, member_pw				AS m_Pw
+			, member_name			AS m_Name
+			, level_code			AS m_Level
+			, member_addrss			AS m_Addr
+			, member_email			AS m_Email
+			, member_phone			AS m_Phone
+			, member_reg_date		AS m_Reg_Date
+			, member_account_status AS m_Acnt_Status
+			, member_incentive		AS m_Incentive
+		FROM 
+			tb_member AS m
+		where
+			m.level_code = 'level_4';		
+	</select>
+
+</mapper>

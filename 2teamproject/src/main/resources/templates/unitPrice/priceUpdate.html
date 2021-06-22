@@ -8,7 +8,7 @@
 	<div class="page-header">
 	<ol class="breadcrumb">
 		<li class="breadcrumb-item">Shoppingmall</li>
-		<li class="breadcrumb-item active">PriceList</li>
+		<li class="breadcrumb-item active">PriceUpdate</li>
 	</ol>
 
 	<ul class="app-actions">
@@ -31,35 +31,45 @@
 	<div class="main-container">
 		<div class="row gutters justify-content-center">
 			<div class="col-xl-10 col-lg-10 col-md-12 col-sm-12 col-24">
-				<form id="pirceAddFrom" th:action="@{/PriceAdd}" method="post">
+				<form id="priceUpdateFrom" th:action="@{/priceUpdate}" method="post">
 					<div class="card m-0">
 						<div class="card-header">
-							<div class="card-title">단가표 등록</div>
+							<div class="card-title">단가표 수정</div>
 						</div>
 						<div class="card-body">
+							<input type="hidden" class="form-control" id="price_Code" name="price_Code" th:value="${price.price_Code}" required="required"  />
+							
 							<div class="form-group">
-								<input type="text" class="form-control" id="wareHouse_Type" name="wareHouse_Type" placeholder="창고종류" required="" />
+								<div>창고 종류</div>
+								<input type="text" class="form-control" id="wareHouse_Type" name="wareHouse_Type" th:value="${price.wareHouse_Type}" required="required" />
 							</div>
 							<div class="form-group">
-								<input type="email" class="form-control" id="contract_Type" name="contract_Type" placeholder="계약종류" required="" />
+								<div>계약 종류</div>
+								<input type="text" class="form-control" id="contract_Type" name="contract_Type" th:value="${price.contract_Type}" required="required" />
 							</div>
 							<div class="form-group">
-								<input type="text" class="form-control" id="price_Weight" name="price_Weight" placeholder="물품 개당무게" required="" />
-							</div>
-							<div class="form-group">
-								<input type="text" class="form-control" id="price_Number" name="price_Number" placeholder="제한수량" required="" />
-							</div>
-							<div class="form-group">
-								<input type="text" class="form-control" id="price_Zone" name="price_Zone" placeholder="구역개수" required="" />
-							</div>
-							<div class="form-group">
-								<input type="text" class="form-control" id="price_Day" name="price_Day" placeholder="계약기간" required="" />
-							</div>
-							<div class="form-group">
-								<input type="text" class="form-control" id="price_Price" name="price_Price" placeholder="사용요금" required="" />
+								<div>물품 개당 무게</div>
+								<input type="text" class="form-control" id="price_Weight" name="price_Weight" th:value="${price.price_Weight}" required="required" />
 							</div>
 							
-							<button type="button" id="submit" name="submit" class="btn btn-primary float-right" >단가표 등록 버튼</button>
+							<div class="form-group">
+								<div>제한수량</div>
+								<input type="text" class="form-control" id="price_Number" name="price_Number" th:value="${price.price_Number}" required="required" />
+							</div>
+							<div class="form-group">
+								<div>구역개수</div>
+								<input type="text" class="form-control" id="price_Zone" name="price_Zone" th:value="${price.price_Zone}" required="required" />
+							</div>
+							<div class="form-group">
+								<div>기간</div>
+								<input type="text" class="form-control" id="price_Day" name="price_Day" th:value="${price.price_Day}" required="required" />
+							</div>
+							<div class="form-group">
+								<div>가격</div>
+								<input type="text" class="form-control" id="price_Price" name="price_Price" th:value="${price.price_Price}" required="required" />
+							</div>
+							
+							<button type="submit" id="submit" name="submit" class="btn btn-primary float-right" >단가표 수정 버튼</button>
 						</div>
 					</div>
 				</form>

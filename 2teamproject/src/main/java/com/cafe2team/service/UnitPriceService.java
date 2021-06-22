@@ -33,6 +33,7 @@ public class UnitPriceService {
 		log.info("==============================");
 	}
 	
+	// 단가표 조회
 	public List<Price> getPriceList(){
 		
 		
@@ -42,6 +43,7 @@ public class UnitPriceService {
 		return priceList;
 	}
 	
+	// 단가표 추가
 	public int priceAdd(Price price) {
 		
 		int result = unitPriceMapper.priceAdd(price);
@@ -49,8 +51,28 @@ public class UnitPriceService {
 		return result;
 	}
 	
+	// 단가표 수정을 위한 조회
+	public Price priceInfo(String price_Code) {
+		
+		Price result = unitPriceMapper.priceInfo(price_Code);
+		
+		return result;
+	}
+	
+	// 단가표 수정
 	public int priceUpdate(Price price) {
 		
-		return unitPriceMapper.priceUpdate(price);
+		int result = unitPriceMapper.priceUpdate(price);
+		
+		return result;
 	}
+	
+	// 단가표 삭제
+	public int priceRemove(Price price) {
+		
+		int result = unitPriceMapper.priceRemove(price);
+		
+		return result;
+	}
+	
 }

@@ -58,10 +58,10 @@
 							<a th:href="@{/priceAdd}">등록</a>
 						</td>
 						<td>
-							<a th:href="@{#}">수정</a>
+							<a th:href="@{/priceUpdate(price_Code=${l.price_Code})}" >수정</a>
 						</td>
 						<td>
-							<a th:href="@{#}">삭제</a>
+							<a th:href="@{/priceRemove(price_Code=${l.price_Code})}">삭제</a>
 						</td>
 					</tr>
 				</tbody>

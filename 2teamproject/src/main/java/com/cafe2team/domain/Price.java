@@ -11,6 +11,8 @@ public class Price {
 	private String price_Price;
 	private String unit_Id;
 	private String unit_reg_date;
+	private String unit_price_update;
+	
 	public String getPrice_Code() {
 		return price_Code;
 	}
@@ -71,15 +73,20 @@ public class Price {
 	public void setUnit_reg_date(String unit_reg_date) {
 		this.unit_reg_date = unit_reg_date;
 	}
+	public String getUnit_price_update() {
+		return unit_price_update;
+	}
+	public void setUnit_price_update(String unit_price_update) {
+		this.unit_price_update = unit_price_update;
+	}
+	
 	@Override
 	public String toString() {
 		return "Price [price_Code=" + price_Code + ", wareHouse_Type=" + wareHouse_Type + ", contract_Type="
 				+ contract_Type + ", price_Weight=" + price_Weight + ", price_Number=" + price_Number + ", price_Zone="
 				+ price_Zone + ", price_Day=" + price_Day + ", price_Price=" + price_Price + ", unit_Id=" + unit_Id
-				+ ", unit_reg_date=" + unit_reg_date + "]";
+				+ ", unit_reg_date=" + unit_reg_date + ", unit_price_update=" + unit_price_update + "]";
 	}
-	
-	
 	
 	
 }
